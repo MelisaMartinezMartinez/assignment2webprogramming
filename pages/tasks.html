@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Task Manager</title>
+</head>
+<body>
+    <h2>Task Manager</h2>
+    <form id="taskForm" action="../server/add_task.php" method="POST">
+        <label for="title">Task Title:</label>
+        <input type="text" id="title" name="title" required><br>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description"></textarea><br>
+
+        <label for="priority">Priority:</label>
+        <select id="priority" name="priority">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select><br>
+
+        <label for="due_date">Due Date:</label>
+        <input type="date" id="due_date" name="due_date"><br>
+
+        <label for="status">Status:</label>
+        <select id="status" name="status">
+            <option value="Pending">Pending</option>
+            <option value="Completed">Completed</option>
+        </select><br>
+
+        <button type="submit">Add Task</button>
+    </form>
+
+    <h3>Task List</h3>
+    <div id="taskList"></div>
+
+    <script src="../scripts/task_manager.js"></script>
+</body>
+</html>
